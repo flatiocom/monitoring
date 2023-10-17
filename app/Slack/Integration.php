@@ -5,7 +5,7 @@ namespace Pd\Monitoring\Slack;
 /**
  * @property int $id {primary}
  * @property string $name
- * @property string $hookUrl
+ * @property string|null $hookUrl
  * @property string $channel
  */
 class Integration extends \Nextras\Orm\Entity\Entity

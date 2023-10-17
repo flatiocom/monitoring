@@ -39,7 +39,6 @@ class RabbitQueueCheck extends Check
 			}
 
 			$queues = \Nette\Utils\Json::decode((string) $response->getBody());
-
 			$checkQueues = $check->getQueues();
 			$messages = [];
 			foreach ($queues as $queue) {
@@ -48,7 +47,6 @@ class RabbitQueueCheck extends Check
 					$messages[$key] = $queue->messages;
 				}
 			}
-
 			if (\count($checkQueues) > \count($messages)) {
 				foreach ($checkQueues as $k => $v) {
 					if ( ! \array_key_exists($k, $messages)) {

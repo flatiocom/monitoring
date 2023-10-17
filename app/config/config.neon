@@ -413,12 +413,12 @@ services:
 	-
 		factory: \Monolog\Processor\WebProcessor
 
-	-
-		factory: \Monolog\Handler\ElasticsearchHandler
-		arguments:
-			client: @\Elasticsearch\Client
-			options:
-				index: %monologIndex%
+	#-
+	#	factory: \Monolog\Handler\ElasticsearchHandler
+	#	arguments:
+	#		client: @\Elasticsearch\Client
+	#		options:
+	#			index: %monologIndex%
 
 
 	pd.monolog.logger:

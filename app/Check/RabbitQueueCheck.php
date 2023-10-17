@@ -28,7 +28,6 @@ class RabbitQueueCheck extends Check
 			return ICheck::STATUS_ERROR;
 		} else {
 			$maximum = $this->getMaximumMessageCount();
-
 			foreach ($this->getQueues() as $k => $v) {
 				if ( ! isset($last[$k]) || $last[$k] > $maximum[$k] * 2) {
 					return ICheck::STATUS_ERROR;
